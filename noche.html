@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>La Noche</title>
+  </head>
+  <body class="noche">
+    <h1>🌙 La Noche del Jueves</h1>
+    <p>Mañana llega la beca. Pero esta noche tus amigos te llaman.</p>
+
+    <div id="cartera">...</div>
+    <div id="aviso"></div>
+
+    <div>
+      <div
+        class="tarjeta"
+        onclick="
+          elegir(
+            -30,
+            'Noche épica. Recuerdos para siempre. Cartera destrozada. -30€',
+            'red',
+          )
+        "
+      >
+        <h3>🎉 Salir de fiesta</h3>
+        <p>Copas, taxi, kebab a las 4am. el pack completo.</p>
+        <span class="precio caro">-30 €</span>
+      </div>
+
+      <div
+        class="tarjeta"
+        onclick="
+          elegir(-10, 'Pizza en casa, Civilizado y Economico. -10€', 'green')
+        "
+      >
+        <h3>🍕 Pizza en casa</h3>
+        <p>Pedís pizza entre todos y veis una pelicula. Plan perfecto</p>
+        <span class="precio barato">-10 €</span>
+      </div>
+
+      <div
+        class="tarjeta"
+        onclick="
+          elegir(
+            20,
+            '¡Tu primo te devuelve los 20€ que le prestaste! +20€',
+            'ganando',
+          )
+        "
+      >
+        <h3>📱 Quedate en casa</h3>
+        <p>Sofá, serie y tu primo te hsce un bizum de lo que te debia.</p>
+        <span class="precio ganando">+20 €</span>
+      </div>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <script src="noche.js"></script>
+  </body>
+</html>

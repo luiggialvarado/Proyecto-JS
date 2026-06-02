@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Primera parte de CSS PAGINA 1 */
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f5f0e8;
+  text-align: center;
+  padding: 40px;
+}
+h1 {
+  color: #333;
+}
+p {
+  font-size: 18px;
+  color: #555;
+}
+/* Hacemos la caja que nos mostrara el dinero */
+#cartera {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2a7a2a;
+  margin: 20px 0;
+}
+/* Estilos para los botones */
+.boton {
+  display: inline-block; /* usamos inline-block para que los botones esten uno al lado del otro y no uno encima del otro */
+  margin: 10px;
+  padding: 15px 30px;
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.boton:hover {
+  background-color: #2667cc; /* cambiamos el color a un poco mas oscuro cn el hover */
+}
+
+/* agregamos la primera animacion para la entrada */
+@keyframes aparecerEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* con estas propiedades conseguimos que el contenido aparece desde arriba mientras se hace visible. */
+}
+#contenido {
+  animation-name: aparecerEntrada;
+  animation-duration: 1s;
+  /* la animacion empieza pausada y la iniciamos desde JS */
+  animation-play-state: paused;
+}
+/*------------- HASTA AQUI LA PAGINA 1 --------------*/
+
+/*----------------- Pagina 2 SUPERMERCADO -------------------------*/
+
+.supermercado {
+  background-color: #e8f5e9;
+}
+.supermercado h1 {
+  color: #2a7a2a;
+}
+.supermercado #cartera {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 28px;
+  font-weight: bold;
+  color: #2a7a2a;
+  margin: 10px 0 30px 0;
+}
+
+/* le hago una tarjeta para cada opcion del supermercado */
+
+.tarjeta {
+  display: inline-block;
+  width: 200px;
+  margin: 15px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.tarjeta:hover {
+  border-color: #2a7a2a;
+  background-color: #f0fff0;
+}
+.tarjeta h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.tarjeta p {
+  font-size: 13px;
+  color: #777;
+  margin: 0 0 15px 0;
+}
+
+/* agregamos el color a los precios */
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.precio .caro {
+  color: #d32f2f;
+}
+.precio .barato {
+  color: #2a7a2a;
+}
+
+/* el mensaje */
+
+#mensaje {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+/* animacion para el mensaje */
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* la animacion del mensaje */
+
+#mensaje {
+  animation-name: aparecerMensaje;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards; /* con forwards mantenemos la animacion visible */
+}
+
+/*------------------------ Hasta aqui el supermercado ------------------------*/
+
+/* ----------------------- Pagina 3: Cafeteria --------------------------------*/
+
+.cafeteria {
+  background-color: #fff8e1;
+}
+
+.cafeteria h1 {
+  color: #e65100;
+}
+
+.cafeteria #cartera {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}
+
+/* AVISO!!: el color lo cambia JS segun el dinero que nos quede */
+
+#cartera .rico {
+  color: #2a7a2a;
+}
+#cartera .justo {
+  color: #f57c00;
+}
+#cartera .pobre {
+  color: #d32f2f;
+}
+
+#aviso {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.cafeteria .tarjeta:hover {
+  border-color: #e65100;
+  background-color: #fff3e0;
+}
+
+/*  agrego el color para el precio gratis  */
+.precio .gratis {
+  color: #1565c0;
+}
+
+/* ----------   HASTA AQUI LA PAGINA 3: cafeteria -------------    */
+
+/* ----------   Pagina 4: noche -------------    */
+
+.noche {
+  background-color: #1a1a2e;
+  color: white;
+}
+.noche h1 {
+  color: #e0aaff;
+}
+.noche p {
+  color: #aaa;
+}
+.noche #cartera {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #16213e;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.noche #cartera .rico {
+  color: #69ff69;
+}
+.noche #cartera .justo {
+  color: #ffd369;
+}
+.noche #cartera .pobre {
+  color: #ff6b6b;
+}
+.noche #aviso {
+  color: #888;
+}
+/* modifico el color de las tarjetas y las carteras*/
+.noche .tarjeta {
+  background-color: #16213e;
+  border: 2px solid #333;
+}
+.noche .tarjeta:hover {
+  border-color: #e0aaff;
+  background-color: #0f3460;
+}
+.noche .tarjeta h3 {
+  color: #e0aaff;
+}
+.noche .tarjeta p {
+  color: #aaa;
+}
+.noche .precio .caro {
+  color: #ff6b6b;
+}
+.noche .precio .barato {
+  color: #69ff69;
+}
+.noche .precio .ganando {
+  color: #ffd369;
+}
+
+/* cambio el nombre de la animacion */
+.noche #mensaje {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation-name: aparece;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+@keyframes aparece {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* ----------------------- Hasta aqui la pagina 4: La Noche ------------------------- */
+
+/* ----------------------- El final ----------------------------------- */
+
+.final {
+  transition: background-color 1s ease;
+}
+
+.final #contenido {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  opacity: 0;
+  animation-name: final;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+@keyframes final {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* -------------- agrego parte del estilo para las desiciones finales----------------- */
+#imagen-final {
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+#titulo-final {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+#texto-final {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+#dinero-final {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#boton-reinicio {
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+#boton-reinicio:hover {
+  background-color: #555;
+}
+
+/* Creo una animacion pero solo se activa si la aventura acaba mal 😖 */
+
+@keyframes temblar {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#dinero-final.temblar {
+  animation: temblar 0.4s ease infinite;
+  color: #d32f2f;
+}

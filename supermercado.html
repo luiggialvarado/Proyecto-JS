@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>El Supermercado</title>
+</head>
+<body class="supermercado">
+    <!--------- PAGINA 2 ------------->
+    <!----------Encabezado----------->
+    <h1>🛒 El Supermercado</h1>
+    <P>Tienes que comer algo. ¿Que metes en el carrito?</P>
+    <p>Tu cartera: <span id="cartera">...</span></p>
+
+    <!------------ Tarjetas: Empezamos con los primeros gastos ---------------->
+     
+    <div>
+
+        <div class="tarjeta" onclick="elegir(-8, 'Gazpacho de brick... clasico universitario. -8€', 'green')">
+            <h3>🥫 Marca Blanca</h3>
+            <p>Gazpacho de brick, pasta y arroz. No es bonito pero funciona.</p>
+            <span class="precio barato">-8 €</span>
+        </div>
+
+        <div class="tarjeta" onclick="elegir(-25, '¡Salmón noruego y kombucha! Tu cartera llora. -25€', 'red')">
+            <h3>🐟 Producto premium</h3>
+            <p>Salmón noruego, aguacate y kombucha de jengibre.</p>
+            <span class="precio caro">-25 €</span>
+        </div>
+
+        <div class="tarjeta" onclick="elegir(-3, 'Solo lo basico. Huevos y pan. Sobreviviras. -3€', 'green')">
+        <h3>🥚 Solo lo básico 🍞</h3>
+        <p>Huevos, pan y una lata de atún. Modo supervivencia activado.</p>
+        <span class="precio barato">-3 €</span>
+    </div>
+
+    </div>
+
+    <div id="mensaje"></div>
+
+    
+
+    <script src="supermercado.js"></script>
+</body>
+</html>
+

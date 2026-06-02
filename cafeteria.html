@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>La Cafetería</title>
+  </head>
+
+  <!---------------- Pagina 3: cafeteria  -------------------->
+
+  <body class="cafeteria">
+    <h1>☕️ La Cafeteria</h1>
+    <p>Son las 10 de la mañana. El olor a café es irresistible.</p>
+
+    <div id="cartera">...</div>
+    <div id="aviso"></div>
+
+    <!-------------------- Tarjetas de opciones --------------------->
+
+    <div>
+      <div
+        class="tarjeta"
+        onclick="elegir(-1.5, '¡Cafe con leche! Pequeño lujo. -1.50€', 'green')"
+      >
+        <h3>☕️ Cafe con leche</h3>
+        <p>El clasico. Te despierta y te reconforta.</p>
+        <span class="precio barato">-1.50 €</span>
+      </div>
+
+      <div
+        class="tarjeta"
+        onclick="elegir(-4.5, 'Menu completo. Rico pero caro. -4.50€', 'red')"
+      >
+        <h3>🥐 Menu desayuno</h3>
+        <p>Café, tostada con tomate y zumo. Como un rey.</p>
+        <span class="precio caro">-4.50 €</span>
+      </div>
+
+      <div
+        class="tarjeta"
+        onclick="elegir(0, '¡Agua del grifo gratis! Dignidad: 0. -0€', 'green')"
+      >
+        <h3>💧 Agua del grifo</h3>
+        <p>Gratis. Infinita. Hidratante. El lujo del pobre.</p>
+        <span class="precio gratis">0 €</span>
+      </div>
+    </div>
+
+    <!--------------- MENSAJE -------------------->
+
+    <div id="mensaje"></div>
+
+    <script src="cafeteria.js"></script>
+  </body>
+</html>
